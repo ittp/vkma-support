@@ -20,7 +20,7 @@ import { ListData } from "../components/list";
 export default function App() {
   return (
     <View activePanel="profile">
-      <ListData />
+   
       <Panel id="profile">
         <PanelHeader>Support</PanelHeader>
 
