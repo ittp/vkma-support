@@ -3,9 +3,6 @@ import React, { useState } from "react";
 
 import Search from "@vkontakte/vkui/dist/components/Search";
 
-const usersFiltered = data.filter(
-  ({ name }) => name.toLowerCase().indexOf(search.toLowerCase()) > -1
-);
 
 export default function SearchComponent() {
   const platform = usePlatform();
