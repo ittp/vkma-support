@@ -1,37 +1,38 @@
-import {
-  Group,
-  List,
-  Panel,
-  PanelHeader,
-  Root,
-  SimpleCell,
-  View,
-  FormItem,
-  FormLayout,
-  Input,
-  Textarea,
-  Select,
-  Switch,
-  Search,
-} from "@vkontakte/vkui";
+//  Group,
+//  List,
+//  Panel,
+//  PanelHeader,
+//  Root,
+//  SimpleCell,
+//  View,
+//  FormItem,
+//  FormLayout,
+//  Input,
+//  Textarea,
+//  Select,
+//  Switch,
+//  Search,
 
-import { ListData } from "../components/list";
+
+
+
+import { Root, View, Panel, PanelHeader, Group, SimpleCell } from  "@vkontakte/vkui";
+
+const icons = require('@vkontakte/icons')
 
 export default function App() {
+
+  const data = {}
+  
+  
   return (
     <View activePanel="profile">
-      <ListData />
-      <Panel id="profile">
-        <PanelHeader>Support</PanelHeader>
 
-        <Search />
-        <FormItem top={1} bottom={1}>
-          <Textarea rows={3} placeholder="Description" />
-        </FormItem>
+      <Panel id="profile">
+        <PanelHeader>Profile</PanelHeader>
+        
         <Group>
-          <List>1</List>
-          <SimpleCell>{process.env.API_TOKEN}</SimpleCell>
-          <SimpleCell>world</SimpleCell>
+          Profile Content
         </Group>
       </Panel>
     </View>

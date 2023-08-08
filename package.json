@@ -1,28 +1,32 @@
 {
-  "name": "vkma-its",
-  "version": "1.0.0",
+  "name": "vkma-support",
+  "version": "1.0.1",
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "@vkontakte/icons": "1.201.0",
-    "@vkontakte/vk-bridge": "2.7.2",
-    "@vkontakte/vk-miniapps-deploy": "0.0.26",
+    "@vkontakte/icons": "latest",
+    "@vkontakte/vk-bridge": "latest",
+    "@vkontakte/vk-miniapps-deploy": "latest",
+    "@vkontakte/vk-tunnel": "latest",
     "@vkontakte/vkui": "latest",
     "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
     "passport": "^0.6.0",
     "passport-mail": "^1.0.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "4.0.3",
-    "swr": "^2.2.0"
+    "react-scripts": "4.0.3"
   },
   "devDependencies": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@babel/plugin-proposal-private-property-in-object": "latest",
+    "@types/node": "^20.4.8",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.7",
     "typescript": "latest"
   },
   "scripts": {
+    "dev": "cross-env PORT=3444 HTTPS=false  react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

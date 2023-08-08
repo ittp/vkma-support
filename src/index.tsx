@@ -1,23 +1,31 @@
 import { StrictMode } from "react";
 import * as ReactDOMClient from "react-dom/client";
-import { ConfigProvider, AppRoot, Footer, Card, Select } from "@vkontakte/vkui";
+
+import { ConfigProvider, AppRoot, Footer, View, Group } from "@vkontakte/vkui";
+
 import "@vkontakte/vkui/dist/vkui.css";
+
+
+//const { createRoot } = require('react-dom')/
 
 import App from "./App";
 
 
-const rootElement = document.getElementById("root");
-const root = ReactDOMClient.createRoot(rootElement!);
+
+//const rootElement = document.getElementById("root")
+
+
+//const root = ReactDOMClient.createRoot(rootElement);
+const root = ReactDOM.createRoot(document.getElementById("root")!)
+// as Element);
+
 
 root.render(
-  <StrictMode>
+//  <Strictode>
     <ConfigProvider>
-      <Card>1</Card>
       <AppRoot>
         <App />
-
-        <Footer>Footer</Footer>
       </AppRoot>
     </ConfigProvider>
-  </StrictMode>
+//  </StrictMode>
 );
