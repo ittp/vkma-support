@@ -1,26 +1,28 @@
 import {
+  FormItem,
+  FormLayout,
   Group,
+  IconButton,
+  Input,
   List,
   Panel,
   PanelHeader,
-  Root,
-  SimpleCell,
-  View,
-  FormItem,
-  FormLayout,
-  Input,
-  Textarea,
-  Select,
-  Switch,
+  AppRoot,
   Search,
+  Select,
+  SimpleCell,
+  Textarea,
+  View,
+  HorizontalCell,
 } from "@vkontakte/vkui";
 
-import { ListData } from "../components/list";
+// import { ListData } from "../components/list";
 
 export default function App() {
+  let options = [{ value: "VZ" }, { value: "KS" }];
   return (
     <View activePanel="profile">
-      <ListData />
+      <Select options={options} />
       <Panel id="profile">
         <PanelHeader>Support</PanelHeader>
 
