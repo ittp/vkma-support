@@ -5,8 +5,13 @@
 const axios = require("axios");
 
 const api = axios.create({
-  baseURL: "http://anabasis.pro:1337/api",
+  baseURL: process.env.api_url/api",
   headers: {
     Authrization: "Bearer ${process.env.token}"
   }
 });
+
+async () => { 
+  let devices = await api.get('/devices')
+}
+
